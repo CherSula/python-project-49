@@ -30,7 +30,7 @@ def game_brain_even():
                 print(f'"{answer}" is wrong answer ;(. Correct answer was "yes".')
                 break
         else:
-            print(f"'{answer}' is wrong answer ;(.")
+            print(f'"{answer}" is wrong answer ;(.')
             break
     return result
 
