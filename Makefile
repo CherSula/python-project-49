@@ -7,6 +7,9 @@ brain-even:
 brain-calc:
 	poetry run brain-calc
 
+brain-gcd:
+	poetry run brain-gcd
+
 game-intro:
 	poetry run game-intro
 
