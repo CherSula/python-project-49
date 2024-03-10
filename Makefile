@@ -4,6 +4,12 @@ brain-games:
 brain-even:
 	poetry run brain-even
 
+brain-calc:
+	poetry run brain-calc
+
+game-intro:
+	poetry run game-intro
+
 install:
 	poetry install
 

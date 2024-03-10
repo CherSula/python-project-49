@@ -3,12 +3,6 @@ import prompt
 from random import randint
 
 
-def welcome_user():
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    return name
-
-
 def game_brain_even():
     print('Answer "yes" if the number is even, otherwise answer "no".')
     result = 0
@@ -34,11 +28,19 @@ def game_brain_even():
             break
     return result
 
+
+def welcome_user():
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
+    return name
+
+
 def game_result(result, name):
     if result == 3:
         print(f'Congratulations, {name}!')
     else:
         print(f"Let's try again, {name}!")
+
 
 def main():
     print('Welcome to the Brain Games!')
@@ -48,4 +50,5 @@ def main():
 
 
 if __name__ == '__main__':
+
     main()
