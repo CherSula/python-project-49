@@ -15,9 +15,10 @@ prompt = "^0.4.1"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
-brain-even = "brain_games.scripts.games.brain_even:main"
-brain-calc = "brain_games.scripts.games.brain_calc:main"
-brain-gcd = "brain_games.scripts.games.brain_gcd:main"
+brain-even = "brain_games.scripts.games.brain_even:start_round"
+brain-calc = "brain_games.scripts.games.brain_calc:start_round"
+brain-gcd = "brain_games.scripts.games.brain_gcd:start_round"
+brain-progression = "brain_games.scripts.games.brain_progression:start_round"
 game-intro = "brain_games.scripts.game_intro:main"
 
 [tool.poetry.group.dev.dependencies]

@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
 import prompt
-import random
-from random import randint
+from random import randint, choice
 
 
 def start_round():
     # при выигрыше функция вернет 1, при проигрыше 0
     gen_number1 = randint(1, 100)
     gen_number2 = randint(1, 100)
-    operator = random.choice(('+', '-', '*'))
-    print('What is the result of the expression?')
+    operator = choice(('+', '-', '*'))
     answer = int(prompt.string(f'Question: '
                                f'{gen_number1} {operator} {gen_number2}\n'
                                f'Your answer: '))  # type: ignore

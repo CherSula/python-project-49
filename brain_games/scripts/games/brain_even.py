@@ -4,7 +4,6 @@ from random import randint
 
 
 def start_round():
-    print('Answer "yes" if the number is even, otherwise answer "no".')
     gen_number = randint(1, 100)
     answer = prompt.string(f'Question: {gen_number}\nYour answer: ')
     if answer == 'yes':

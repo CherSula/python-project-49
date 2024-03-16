@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import prompt
-from brain_games.scripts.games import brain_even, brain_calc, brain_gcd
+from brain_games.scripts.games import (
+    brain_even, brain_calc,
+    brain_gcd, brain_progression
+)
 
 
 def welcome_user():
@@ -28,11 +31,18 @@ def start_game_loop(number_of_rounds, start_round_func):
 def game(game_to_play, number_of_rounds):
     result = 0
     if game_to_play == 'brain-even':
+        print('Answer "yes" if the number is even, otherwise answer "no".')
         result = start_game_loop(number_of_rounds, brain_even.start_round)
     elif game_to_play == 'brain-calc':
+        print('What is the result of the expression?')
         result = start_game_loop(number_of_rounds, brain_calc.start_round)
     elif game_to_play == 'brain-gcd':
+        print('Find the greatest common divisor of given numbers.')
         result = start_game_loop(number_of_rounds, brain_gcd.start_round)
+    elif game_to_play == 'brain-progression':
+        print('What number is missing in the progression?')
+        result = start_game_loop(number_of_rounds,
+                                 brain_progression.start_round)
     return result
 
 
