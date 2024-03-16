@@ -2,7 +2,8 @@
 import prompt
 from brain_games.scripts.games import (
     brain_even, brain_calc,
-    brain_gcd, brain_progression
+    brain_gcd, brain_progression,
+    brain_prime
 )
 
 
@@ -43,6 +44,9 @@ def game(game_to_play, number_of_rounds):
         print('What number is missing in the progression?')
         result = start_game_loop(number_of_rounds,
                                  brain_progression.start_round)
+    elif game_to_play == 'brain-prime':
+        print('Answer "yes" if given number is prime. Otherwise answer "no".')
+        result = start_game_loop(number_of_rounds, brain_prime.start_round)
     return result
 
 

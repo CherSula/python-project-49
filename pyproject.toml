@@ -19,6 +19,7 @@ brain-even = "brain_games.scripts.games.brain_even:start_round"
 brain-calc = "brain_games.scripts.games.brain_calc:start_round"
 brain-gcd = "brain_games.scripts.games.brain_gcd:start_round"
 brain-progression = "brain_games.scripts.games.brain_progression:start_round"
+brain-prime = "brain_games.scripts.games.brain_prime:start_round"
 game-intro = "brain_games.scripts.game_intro:main"
 
 [tool.poetry.group.dev.dependencies]
