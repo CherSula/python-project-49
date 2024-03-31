@@ -16,9 +16,6 @@ brain-progression:
 brain-prime:
 	poetry run brain-prime
 
-game-intro:
-	poetry run game-intro
-
 install:
 	poetry install
 

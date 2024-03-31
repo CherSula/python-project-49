@@ -12,11 +12,9 @@ def start_round():
         f'Question: {hide_item(progression_list, hidden_number)}\n'
         f'Your answer: '))  # type: ignore
     if answer == hidden_number:
-        return 1
+        return 1, answer, hidden_number
     else:
-        print(f'"{answer}" is wrong answer ;(.'
-              f'Correct answer was "{hidden_number}".')
-        return 0
+        return 0, answer, hidden_number
 
 
 def progression(first_number, increment, prog_len):

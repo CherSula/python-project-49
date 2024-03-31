@@ -166,6 +166,7 @@ cython_debug/
 !/tests/**/*.egg
 /*.egg-info
 /dist/*
+/asciinema_casts/*
 build
 _build
 .cache

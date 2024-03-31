@@ -7,12 +7,11 @@ from math import gcd
 def start_round():
     gen_number1 = randint(1, 100)
     gen_number2 = randint(1, 100)
-    nod = gcd(gen_number1, gen_number2)
+    correct_answer = gcd(gen_number1, gen_number2)
     answer = int(prompt.string(
         f'Question: {gen_number1}, {gen_number2}\n'
         f'Your answer: '))  # type: ignore
-    if answer == nod:
-        return 1
+    if answer == correct_answer:
+        return 1, answer, correct_answer
     else:
-        print(f'"{answer}" is wrong answer ;(. Correct answer was "{nod}".')
-        return 0
+        return 0, answer, correct_answer

@@ -8,16 +8,15 @@ def start_round():
     answer = prompt.string(f'Question: {gen_number}\nYour answer: ')
     if answer == 'yes':
         if gen_number % 2 == 0:
-            return 1
+            correct_answer = "yes"
+            return 1, answer, correct_answer
         else:
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "no".')
-            return 0
+            correct_answer = "no"
+            return 0, answer, correct_answer
     elif answer == 'no':
         if gen_number % 2 != 0:
-            return 1
+            correct_answer = "no"
+            return 1, answer, correct_answer
         else:
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "yes".')
-            return 0
-    else:
-        print(f'"{answer}" is wrong answer ;(.')
-    return 0
+            correct_answer = "yes"
+            return 0, answer, correct_answer

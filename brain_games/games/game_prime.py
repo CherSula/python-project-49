@@ -12,22 +12,22 @@ def start_round():
                 if (gen_number % number == 0):
                     deviders += 1
             if (deviders <= 0):
-                return 1
+                correct_answer = 'yes'
+                return 1, answer, correct_answer
             else:
-                print(f'"{answer}" is wrong answer ;(. Correct answer was "no".')
-                return 0
+                correct_answer = 'no'
+                return 0, answer, correct_answer
     elif answer == 'no':
         deviders = 0
         for number in range(2, gen_number // 2 + 1):
             if (gen_number % number == 0):
                 deviders += 1
         if (deviders > 0):
-                    return 1
+            correct_answer = 'no'
+            return 1, answer, correct_answer
         elif gen_number == 1:
-            return 1
+            correct_answer = 'no'
+            return 1, answer, correct_answer
         else:
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "yes".')
-            return 0
-    else:
-        print(f'"{answer}" is wrong answer ;(.')
-    return 0
+            correct_answer = 'yes'
+            return 0, answer, correct_answer
