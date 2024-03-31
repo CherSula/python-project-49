@@ -9,7 +9,7 @@ def start_round():
     gen_number2 = randint(1, 100)
     correct_answer = gcd(gen_number1, gen_number2)
     answer = int(prompt.string(
-        f'Question: {gen_number1}, {gen_number2}\n'
+        f'Question: {gen_number1} {gen_number2}\n'
         f'Your answer: '))  # type: ignore
     if answer == correct_answer:
         return 1, answer, correct_answer
