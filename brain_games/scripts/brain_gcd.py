@@ -4,15 +4,7 @@ from brain_games.games import game_gcd
 
 
 def main():
-    number_of_rounds = 3
-    points_to_win = 3
-    name = game_engine.welcome_user()
-    print('Find the greatest common divisor of given numbers.')
-    result = game_engine.start_game_loop(
-        number_of_rounds,
-        game_gcd.start_round
-    )
-    game_engine.show_game_result(result, points_to_win, name)
+    game_engine.run(game_gcd)
 
 
 if __name__ == '__main__':

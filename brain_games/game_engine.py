@@ -9,23 +9,23 @@ def welcome_user():
     return name
 
 
-def start_game_loop(number_of_rounds, start_round_func):
-    result = 0
+def run(game):
+    number_of_rounds = 3
+
+    name = welcome_user()
+    print(game.DESCRIPTION)
+
     for _ in range(number_of_rounds):
-        round_result, answer, correct_answer = start_round_func()
-        if round_result == 0:
+        question, correct_answer = game.generate_round()
+        print(question)
+        user_answer = input('Your answer: ')
+        if user_answer != correct_answer:
             print(
-                f'"{answer}" is wrong answer ;(.'
-                f'Correct answer was "{correct_answer}".'
+                f'"{user_answer}" is wrong answer ;(.'
+                f'Correct answer was "{correct_answer}".\n'
+                f"Let's try again, {name}!"
             )
             break
         print('Correct!')
-        result += 1
-    return result
-
-
-def show_game_result(result, points_to_win, name):
-    if result == points_to_win:
-        print(f'Congratulations, {name}!')
     else:
-        print(f"Let's try again, {name}!")
+        print(f'Congratulations, {name}!')
