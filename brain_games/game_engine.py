@@ -1,5 +1,6 @@
-#!/usr/bin/env python3
 import prompt
+
+ROUNDS = 3
 
 
 def welcome_user():
@@ -10,14 +11,12 @@ def welcome_user():
 
 
 def run(game):
-    number_of_rounds = 3
-
     name = welcome_user()
     print(game.DESCRIPTION)
 
-    for _ in range(number_of_rounds):
+    for _ in range(ROUNDS):
         question, correct_answer = game.generate_round()
-        print(question)
+        print(f'Question: {question}')
         user_answer = input('Your answer: ')
         if user_answer != correct_answer:
             print(

@@ -9,7 +9,7 @@ def generate_round():
     prog_len = randint(5, 10)
     progression_list = progression(first_number, increment, prog_len)
     correct_answer = choice(progression_list)
-    question = f'Question: {hide_item(progression_list, correct_answer)}'
+    question = hide_item(progression_list, correct_answer)
     return question, str(correct_answer)
 
 
@@ -24,10 +24,10 @@ def progression(first_number, increment, prog_len):
 
 def hide_item(progression_list, hidden_number):
     hide_symbol = '..'
-    final_str = ''
+    symbols = []
     for number in progression_list:
         if number == hidden_number:
-            final_str += hide_symbol + ' '
+            symbols.append(hide_symbol)
         else:
-            final_str += f'{number} '
-    return final_str.strip()
+            symbols.append(str(number))
+    return ' '.join(symbols)

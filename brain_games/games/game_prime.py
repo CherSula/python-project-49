@@ -5,16 +5,22 @@ DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 def generate_round():
     gen_number = randint(1, 100)
-    question = f'Question: {gen_number}'
-    if gen_number == 1:
+    question = gen_number
+    if is_prime(gen_number):
+        correct_answer = 'yes'
+    else:
         correct_answer = 'no'
-    if gen_number > 1:
-        deviders = 0
-        for number in range(2, gen_number // 2 + 1):
-            if (gen_number % number == 0):
-                deviders += 1
-        if (deviders <= 0):
-            correct_answer = 'yes'
-        else:
-            correct_answer = 'no'
-    return question, str(correct_answer)
+    return question, correct_answer
+
+
+def is_prime(number):
+    if number == 1:
+        return False
+    deviders = 0
+    for n in range(2, number // 2 + 1):
+        if number % n == 0:
+            deviders += 1
+    if deviders <= 0:
+        return True
+    else:
+        return False

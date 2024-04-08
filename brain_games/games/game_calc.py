@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from random import randint, choice
 
 DESCRIPTION = 'What is the result of the expression?'
@@ -9,7 +8,7 @@ def generate_round():
     gen_number2 = randint(1, 100)
     operator = choice(('+', '-', '*'))
 
-    question = f'Question: {gen_number1} {operator} {gen_number2}'
+    question = f'{gen_number1} {operator} {gen_number2}'
 
     if operator == '+':
         correct_answer = gen_number1 + gen_number2
